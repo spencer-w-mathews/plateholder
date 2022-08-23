@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  Link
+} from 'react-router-dom';
 
 
 function App() {
@@ -14,7 +21,14 @@ function App() {
 
   return (
   <div className="App">
-    <h1>Page Count: {count}</h1>
+    
+    <Routes>
+      {/* search elements in react router */}
+      <Route path="/testing" element={<h1>hello?</h1>} />
+      <Route path="/" element={<h1>Page Count: {count}</h1>}  />
+       
+        
+    </Routes>
   </div>
   );
 }
